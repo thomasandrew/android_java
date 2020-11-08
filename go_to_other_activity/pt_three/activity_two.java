@@ -1,0 +1,30 @@
+package com.example.my_first_java_for_android;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class MainActivity2 extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main2);
+
+        String mensagem = getIntent().getStringExtra("texto");
+        TextView textView = findViewById(R.id.txt);
+
+        textView.setText(mensagem);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent();
+        intent.putExtra("num", 1000);
+
+        setResult(RESULT_OK, intent);
+        finish();
+    }
+}
