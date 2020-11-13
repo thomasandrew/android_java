@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">my_first_java_for_android</string>
+    <string name="hello">Hello</string>
+</resources>
